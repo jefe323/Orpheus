@@ -11,6 +11,7 @@ namespace Orpheus
 
             Console.Write("Enter the name of the text file you would like to play: ");
             string file = Console.ReadLine();
+            file = file.Replace(".txt", "");
             
             Console.WriteLine("                                          ()");
             Console.WriteLine("                           () |");
@@ -40,10 +41,14 @@ namespace Orpheus
             {                
                 //loop through and then get char array from string
                 char[] letters = s.ToLower().ToCharArray();
-                for (int i = 0; i <= letters.Length; i++)
+                for (int i = 0; i < letters.Length; i++)
                 {
                     //send chars to play class
-                    Play(letters[i]);
+                    try
+                    {
+                        Play(letters[i]);
+                    }
+                    catch { }
                 }
             }
         }
