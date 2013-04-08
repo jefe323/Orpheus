@@ -11,7 +11,6 @@ namespace Orpheus
 
             Console.Write("Enter the name of the text file you would like to play: ");
             string file = Console.ReadLine();
-            file = file.Replace(".txt", "");
             
             Console.WriteLine("                                          ()");
             Console.WriteLine("                           () |");
@@ -36,7 +35,7 @@ namespace Orpheus
             
             //Open file using readalllines
             string currentPath = Directory.GetCurrentDirectory();
-            string[] output = File.ReadAllLines(currentPath + "/" + file + ".txt");
+            string[] output = File.ReadAllLines(file);
             foreach (string s in output)
             {                
                 //loop through and then get char array from string
