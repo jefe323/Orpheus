@@ -34,7 +34,6 @@ namespace Orpheus
             Console.WriteLine("Let me play you the song of my people...");
             
             //Open file using readalllines
-            string currentPath = Directory.GetCurrentDirectory();
             string[] output = File.ReadAllLines(file);
             foreach (string s in output)
             {                
